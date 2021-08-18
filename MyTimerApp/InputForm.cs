@@ -5,6 +5,7 @@ namespace MyTimerApp
 {
     public partial class InputForm : Form
     {
+        public string[] date;
         public InputForm()
         {
             InitializeComponent();
@@ -12,34 +13,41 @@ namespace MyTimerApp
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            if (TrytoParseNumber(userInputTextBox.Text, out string errorMessage))
+            date = userInputTextBox.Text.Split(':');
+            if (!CheckingInput(date, out string errorMessage))
             {
-                Close();
+                MessageBox.Show(errorMessage);
             }
             else
             {
-                MessageBox.Show(errorMessage);
-                userInputTextBox.Clear();
+                date = userInputTextBox.Text.Split(':');
+                Close();
             }
         }
 
-        private bool TrytoParseNumber(string userInput, out string errorMessage)
+        private bool CheckingInput(string [] date, out string errorMessage)
         {
-
+            for (int i = 0; i < date.Length; i++)
+            {
+                if (!TrytoParseNumber(date[i]))
+                {
+                    errorMessage = "Ошибка! Неверный формат данных";
+                    return false;
+                }
+            }
+            errorMessage = "";
+            return true;
+        }
+        public static bool TrytoParseNumber(string userInput)
+        {
+            int number;
             try
             {
-                int number = int.Parse(userInput);
-                errorMessage = "";
+                number = int.Parse(userInput);
                 return true;
             }
             catch (FormatException)
             {
-                errorMessage = "Ошибка! Введите число!";
-                return false;
-            }
-            catch (OverflowException)
-            {
-                errorMessage = "Ошибка! Слишком большое число!";
                 return false;
             }
         }
@@ -48,5 +56,6 @@ namespace MyTimerApp
         {
             Close();
         }
+
     }
 }

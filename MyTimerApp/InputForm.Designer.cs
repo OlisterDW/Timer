@@ -30,27 +30,20 @@ namespace MyTimerApp
         private void InitializeComponent()
         {
             this.GreetingLabel = new System.Windows.Forms.Label();
-            this.userInputTextBox = new System.Windows.Forms.TextBox();
             this.OkButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.userInputTextBox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // GreetingLabel
             // 
             this.GreetingLabel.AutoSize = true;
             this.GreetingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GreetingLabel.Location = new System.Drawing.Point(49, 37);
+            this.GreetingLabel.Location = new System.Drawing.Point(49, 20);
             this.GreetingLabel.Name = "GreetingLabel";
-            this.GreetingLabel.Size = new System.Drawing.Size(193, 18);
+            this.GreetingLabel.Size = new System.Drawing.Size(211, 18);
             this.GreetingLabel.TabIndex = 0;
-            this.GreetingLabel.Text = "Сколько минут добавить?";
-            // 
-            // userInputTextBox
-            // 
-            this.userInputTextBox.Location = new System.Drawing.Point(76, 80);
-            this.userInputTextBox.Name = "userInputTextBox";
-            this.userInputTextBox.Size = new System.Drawing.Size(153, 20);
-            this.userInputTextBox.TabIndex = 1;
+            this.GreetingLabel.Text = "Сколько времени добавить?";
             // 
             // OkButton
             // 
@@ -72,15 +65,26 @@ namespace MyTimerApp
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // userInputTextBox
+            // 
+            this.userInputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userInputTextBox.Location = new System.Drawing.Point(72, 61);
+            this.userInputTextBox.Mask = "00:00:00";
+            this.userInputTextBox.Name = "userInputTextBox";
+            this.userInputTextBox.RejectInputOnFirstFailure = true;
+            this.userInputTextBox.Size = new System.Drawing.Size(125, 40);
+            this.userInputTextBox.TabIndex = 4;
+            this.userInputTextBox.ValidatingType = typeof(System.DateTime);
+            // 
             // InputForm
             // 
             this.AcceptButton = this.OkButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(283, 177);
+            this.Controls.Add(this.userInputTextBox);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.OkButton);
-            this.Controls.Add(this.userInputTextBox);
             this.Controls.Add(this.GreetingLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InputForm";
@@ -94,8 +98,8 @@ namespace MyTimerApp
         #endregion
 
         private System.Windows.Forms.Label GreetingLabel;
-        public System.Windows.Forms.TextBox userInputTextBox;
         private System.Windows.Forms.Button OkButton;
         private System.Windows.Forms.Button cancelButton;
+        public System.Windows.Forms.MaskedTextBox userInputTextBox;
     }
 }

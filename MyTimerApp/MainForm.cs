@@ -61,10 +61,14 @@ namespace MyTimerApp
         {
             InputForm inputForm = new InputForm();
             inputForm.ShowDialog();
-            if (inputForm.userInputTextBox.Text != string.Empty)
+            if (inputForm.date != null)
             {
-                int minutes = Convert.ToInt32(inputForm.userInputTextBox.Text);
+                int hours = int.Parse(inputForm.date[0]);
+                int minutes = int.Parse(inputForm.date[1]);
+                int seconds = int.Parse(inputForm.date[2]);
+                dateTime = dateTime.AddHours(hours);
                 dateTime = dateTime.AddMinutes(minutes);
+                dateTime= dateTime.AddSeconds(seconds);
                 timerLabel.Text = dateTime.ToString("T");
             }
         }

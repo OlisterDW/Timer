@@ -71,7 +71,7 @@ namespace MyTimerApp
             this.timerLabel.AutoSize = true;
             this.timerLabel.Font = new System.Drawing.Font("Stencil", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.ForeColor = System.Drawing.Color.Black;
-            this.timerLabel.Location = new System.Drawing.Point(22, 9);
+            this.timerLabel.Location = new System.Drawing.Point(12, 9);
             this.timerLabel.Name = "timerLabel";
             this.timerLabel.Size = new System.Drawing.Size(260, 76);
             this.timerLabel.TabIndex = 2;
@@ -91,7 +91,7 @@ namespace MyTimerApp
             // 
             this.AddMinutesMenuItem.Name = "AddMinutesMenuItem";
             this.AddMinutesMenuItem.Size = new System.Drawing.Size(263, 22);
-            this.AddMinutesMenuItem.Text = "Добавить минуты";
+            this.AddMinutesMenuItem.Text = "Добавить время";
             this.AddMinutesMenuItem.Click += new System.EventHandler(this.AddMinutesMenuItem_Click);
             // 
             // saveTimeToolStripMenuItem
@@ -121,7 +121,7 @@ namespace MyTimerApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(294, 151);
+            this.ClientSize = new System.Drawing.Size(299, 151);
             this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.startPauseButton);
