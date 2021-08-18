@@ -69,18 +69,18 @@ namespace MyTimerApp
             }
         }
 
-        private void таблицаПредыдущихРезультатовToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PreviousResultsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ResultsForm resultsForm = new ResultsForm();
             resultsForm.ShowDialog();
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void saveTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SaveTimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveTime();
         }

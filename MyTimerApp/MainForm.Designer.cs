@@ -99,21 +99,21 @@ namespace MyTimerApp
             this.saveTimeToolStripMenuItem.Name = "saveTimeToolStripMenuItem";
             this.saveTimeToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.saveTimeToolStripMenuItem.Text = "Сохранить время";
-            this.saveTimeToolStripMenuItem.Click += new System.EventHandler(this.saveTimeToolStripMenuItem_Click);
+            this.saveTimeToolStripMenuItem.Click += new System.EventHandler(this.SaveTimeToolStripMenuItem_Click);
             // 
             // таблицаПредыдущихРезультатовToolStripMenuItem
             // 
             this.таблицаПредыдущихРезультатовToolStripMenuItem.Name = "таблицаПредыдущихРезультатовToolStripMenuItem";
             this.таблицаПредыдущихРезультатовToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.таблицаПредыдущихРезультатовToolStripMenuItem.Text = "Таблица предыдущих результатов";
-            this.таблицаПредыдущихРезультатовToolStripMenuItem.Click += new System.EventHandler(this.таблицаПредыдущихРезультатовToolStripMenuItem_Click);
+            this.таблицаПредыдущихРезультатовToolStripMenuItem.Click += new System.EventHandler(this.PreviousResultsToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // MainForm
             // 

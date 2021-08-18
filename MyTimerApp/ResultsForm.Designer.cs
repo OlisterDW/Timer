@@ -61,7 +61,7 @@ namespace MyTimerApp
             this.clearResultsButton.TabIndex = 1;
             this.clearResultsButton.Text = "Очистить список";
             this.clearResultsButton.UseVisualStyleBackColor = true;
-            this.clearResultsButton.Click += new System.EventHandler(this.clearResultsButton_Click);
+            this.clearResultsButton.Click += new System.EventHandler(this.ClearResultsButton_Click);
             // 
             // NumberColumn
             // 

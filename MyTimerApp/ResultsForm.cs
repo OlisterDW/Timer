@@ -28,7 +28,7 @@ namespace MyTimerApp
             }
         }
 
-        private void clearResultsButton_Click(object sender, EventArgs e)
+        private void ClearResultsButton_Click(object sender, EventArgs e)
         {
             ResultsStorage.ClearUserResults();
             ResultDataGridView.Rows.Clear();

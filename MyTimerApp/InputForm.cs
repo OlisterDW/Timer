@@ -12,8 +12,7 @@ namespace MyTimerApp
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            string errorMessage;
-            if (TrytoParseNumber(userInputTextBox.Text, out errorMessage))
+            if (TrytoParseNumber(userInputTextBox.Text, out string errorMessage))
             {
                 Close();
             }
